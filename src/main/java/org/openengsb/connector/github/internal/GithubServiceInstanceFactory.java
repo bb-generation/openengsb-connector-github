@@ -20,7 +20,7 @@ package org.openengsb.connector.github.internal;
 import java.util.Map;
 
 import org.openengsb.core.api.Connector;
-import org.openengsb.core.api.ekb.PersistInterface;
+import org.openengsb.core.ekb.api.PersistInterface;
 import org.openengsb.core.common.AbstractConnectorInstanceFactory;
 
 public class GithubServiceInstanceFactory extends AbstractConnectorInstanceFactory<GithubService> {
@@ -35,12 +35,14 @@ public class GithubServiceInstanceFactory extends AbstractConnectorInstanceFacto
     }
 
     @Override
-    public void doApplyAttributes(GithubService instance, Map<String, String> attributes) {
+    public GithubService doApplyAttributes(GithubService instance, Map<String, String> attributes) {
         instance.setGithubUser(attributes.get(Constants.GITHUB_USER));
         instance.setGithubPassword(attributes.get(Constants.GITHUB_PWD));
 
         instance.setRepository(attributes.get(Constants.GITHUB_REPO));
         instance.setRepositoryOwner(attributes.get(Constants.GITHUB_REPO_OWNER));
+
+        return instance;
     }
     
     public void setPersistInterface(PersistInterface persistInterface) {

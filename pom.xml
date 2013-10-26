@@ -89,7 +89,6 @@
         <configuration>
           <instructions>
             <Import-Package>
-              ${openengsb.imports},
               org.openengsb.domain.issue.*;version="${openengsb.domain.range}",
               *
             </Import-Package>

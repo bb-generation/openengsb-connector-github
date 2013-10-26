@@ -17,22 +17,21 @@
 
 package org.openengsb.connector.github.internal;
 
-import static org.hamcrest.MatcherAssert.assertThat;
-import static org.hamcrest.core.Is.is;
-import static org.mockito.Mockito.mock;
-
 import java.rmi.RemoteException;
 import java.util.HashMap;
-
 import org.junit.Before;
 import org.junit.Test;
-import org.openengsb.core.api.ekb.PersistInterface;
+import org.openengsb.core.ekb.api.PersistInterface;
 import org.openengsb.domain.issue.Field;
 import org.openengsb.domain.issue.Issue;
 import org.openengsb.domain.issue.IssueAttribute;
 import org.openengsb.domain.issue.Priority;
 import org.openengsb.domain.issue.Status;
 import org.openengsb.domain.issue.Type;
+
+import static org.hamcrest.core.Is.is;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
 
 public class GithubServiceUT {
 

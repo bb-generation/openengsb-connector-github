@@ -25,8 +25,8 @@ import java.util.Vector;
 
 import org.openengsb.core.api.AliveState;
 import org.openengsb.core.api.DomainMethodNotImplementedException;
-import org.openengsb.core.api.ekb.EKBCommit;
-import org.openengsb.core.api.ekb.PersistInterface;
+import org.openengsb.core.ekb.api.EKBCommit;
+import org.openengsb.core.ekb.api.PersistInterface;
 import org.openengsb.core.common.AbstractOpenEngSBConnectorService;
 import org.openengsb.domain.issue.Field;
 import org.openengsb.domain.issue.Issue;
